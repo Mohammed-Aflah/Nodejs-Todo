@@ -1,0 +1,37 @@
+<div class="todo-main">
+    <form action="/tasks" method="post" id="form">
+        <div class="controlls">
+            <input type="text" name="task" placeholder="Add Task" id="inp" required>
+            <button type="submit" id="btn">Add</button>
+        </div>
+    </form>
+    <div class="task-list">
+        <ul>
+            <% if(datas) { %>
+                <% datas.forEach((data,index)=>{ %>
+                    <li class="list"><%- data.task %> <span class="icons">
+                                <button id="linthrough" onclick="listClick('<%- index %>')">
+                                    <span class="material-symbols-outlined">
+                                        done_all
+                                    </span>
+                                </button>
+                                <a href="/edit-task/<%-data._id %>" onclick="Edit('<%- data.task %>')">
+                                    <span class="material-symbols-outlined" title="Edit Task">
+                                        edit
+                                    </span>
+                                </a>
+                                <a href="/delete/<%-data._id %>"
+                                    onclick="return confirm('Are You Sure to Delete <%-data.task %> This Task ')">
+
+                                    <span class="material-symbols-outlined" title="Delete Task">
+                                        delete
+                                    </span>
+                                </a>
+                            </span></li>
+                    <% })%>
+                        <%} %>
+
+        </ul>
+    </div>
+</div>
+<script src="/js/script.js"></script>

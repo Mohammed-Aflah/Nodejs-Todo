@@ -1,0 +1,10 @@
+<div class="todo-main edit-main">
+    <form action="/edit-task/<%=data._id%>" method="post" id="form">
+        <div class="controlls">
+            <input type="text" name="task" placeholder="Add Task" id="inp" value="<%=data.task%>" required>
+            <button type="submit" id="btn">Update</button>
+        </div>
+    </form>
+    <div class="task-list">
+    </div>
+</div>
