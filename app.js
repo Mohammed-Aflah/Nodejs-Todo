@@ -4,6 +4,7 @@ const PORT = process.env.PORT || 5000;
 const bodyParser = require("body-parser");
 const router = require("./routes/router");
 const expressejsLayout = require("express-ejs-layouts");
+app.use(require("cors")());
 
 app.set("view engine", "ejs");
 app.set("layout", "layout/main.ejs");

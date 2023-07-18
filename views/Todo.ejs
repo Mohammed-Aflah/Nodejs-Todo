@@ -1,5 +1,5 @@
 <div class="todo-main">
-    <form action="/tasks" method="post" id="form">
+    <form action="/tasks" method="post" id="form" autocomplete="off">
         <div class="controlls">
             <input type="text" name="task" placeholder="Add Task" id="inp" required>
             <button type="submit" id="btn">Add</button>
@@ -11,7 +11,7 @@
                 <% datas.forEach((data,index)=>{ %>
                     <li class="list"><%- data.task %> <span class="icons">
                                 <button id="linthrough" onclick="listClick('<%- index %>')">
-                                    <span class="material-symbols-outlined">
+                                    <span class="material-symbols-outlined" title="Done Task">
                                         done_all
                                     </span>
                                 </button>
@@ -21,7 +21,7 @@
                                     </span>
                                 </a>
                                 <a href="/delete/<%-data._id %>"
-                                    onclick="return confirm('Are You Sure to Delete <%-data.task %> This Task ')">
+                                    onclick="return confirm('Are You Sure to Delete  ``<%-data.task %>``  This Task ')">
 
                                     <span class="material-symbols-outlined" title="Delete Task">
                                         delete
@@ -30,8 +30,13 @@
                             </span></li>
                     <% })%>
                         <%} %>
+                            <!-- <li class="btns">
+                            <button>Clear</button>
+                            <button>mark us all</button>
+                        </li> -->
 
         </ul>
     </div>
 </div>
+
 <script src="/js/script.js"></script>

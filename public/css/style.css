@@ -16,16 +16,18 @@ header {
   justify-content: center;
   width: 100%;
   height: 75px;
+  overflow: hidden;
 }
 .todo-main {
   width: 43%;
   min-height: 500px;
   background: rgb(32, 28, 59);
-  position: absolute;
-  top: 50%;
+  /* position: absolute; */
+  /* top: 50%; */
   padding: 20px 10px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
   box-shadow: 1px 1px 10px 5px rgb(149, 149, 149);
 }
 .todo-main .controlls {
@@ -149,4 +151,15 @@ header {
   .todo-main .task-list{
     width: 95%;
   }
+}
+.todo-main .task-list ul .btns{
+  background-color:transparent;
+  padding: 0%;
+}
+.todo-main .task-list ul .btns button{
+  width: 30%;
+  height: 35px;
+  font-size: 15px;
+  border: none;
+  outline: none;
 }
