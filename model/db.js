@@ -11,4 +11,4 @@ const schema = mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("todo-list", schema);
+module.exports = mongoose.model("todo_list", schema);
